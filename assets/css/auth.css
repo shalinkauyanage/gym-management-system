@@ -1,0 +1,239 @@
+.auth-page,
+.auth-popup-page {
+  min-height: 100vh;
+  margin: 0;
+  /* Clean light backdrop without solid dark or grey background */
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.98), rgba(246, 246, 248, 0.95) 75%),
+    linear-gradient(180deg, #ffffff 0%, #f4f4f6 100%);
+  color: #0e0e0e;
+  position: relative;
+}
+
+.auth-popup-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.auth-shell-simple {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-security-card {
+  width: min(100%, 540px);
+  padding: clamp(26px, 5vw, 44px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 28px;
+  background: #ffffff;
+  /* Popup elevated card shadow */
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.04);
+  animation: authCardPop 0.32s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+@keyframes authCardPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(14px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+.auth-security-card h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.auth-icon-wrap {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
+  border-radius: 18px;
+  background: #0e0e0e;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.masked-email-card,
+.local-otp-card,
+.security-note {
+  border: 1px solid #d2d2d2;
+  border-radius: 16px;
+  background: #f7f7f7;
+}
+
+.masked-email-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.1rem;
+}
+
+.masked-email-card>i {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #0e0e0e;
+  color: #ffffff;
+}
+
+.masked-email-card small,
+.masked-email-card strong {
+  display: block;
+}
+
+.masked-email-card small {
+  margin-bottom: 0.1rem;
+  color: #6f6f6f;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.masked-email-card strong {
+  overflow-wrap: anywhere;
+}
+
+.local-otp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.1rem;
+  border-color: rgba(244, 185, 66, 0.55);
+  background: rgba(244, 185, 66, 0.12);
+}
+
+.local-otp-card small {
+  color: #7f5f0d;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.local-otp-card strong {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 2rem;
+  letter-spacing: 0.16em;
+}
+
+.local-otp-card span,
+.security-note {
+  color: #666666;
+  font-size: 0.8rem;
+}
+
+.security-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.9rem 1rem;
+}
+
+.otp-input {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+}
+
+.password-rules {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem 1rem;
+  padding: 1rem;
+  border-radius: 16px;
+  background: #f6f6f6;
+  color: #777777;
+  font-size: 0.82rem;
+}
+
+.password-rules span {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.password-rules span.is-valid {
+  color: #16835f;
+  font-weight: 700;
+}
+
+@media (max-width: 575.98px) {
+  .auth-shell-simple {
+    padding: 18px 12px;
+  }
+
+  .auth-security-card {
+    border-radius: 24px;
+  }
+
+  .password-rules {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Password visibility toggle */
+.password-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input-wrap .form-control {
+  width: 100%;
+  padding-right: 2.85rem !important;
+}
+
+.password-input-wrap .btn-toggle-password {
+  position: absolute;
+  right: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #6c757d;
+  font-size: 1.15rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  z-index: 5;
+}
+
+.password-input-wrap .btn-toggle-password:hover {
+  color: #111111;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.password-input-wrap .btn-toggle-password:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 1px;
+  color: #111111;
+}
