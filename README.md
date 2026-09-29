@@ -83,8 +83,8 @@ GitHub: [shalinkauyanage](https://github.com/shalinkauyanage)
 **Shenal Perera**  
 GitHub: [shenalhq](https://github.com/shenalhq)
 
-**Tharidu Francesco**  
-GitHub: [shenalhq](https://github.com/shenalhq)
----
+**Tharidu Francesco**   
+GitHub: [tharindusamarakon8-cloud](https://github.com/tharindusamarakon8-cloud)
+
 
 ⭐ If you find this project useful, feel free to explore the repository.
