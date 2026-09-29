@@ -75,11 +75,15 @@ Example:
 
 This project was developed as a practical software development project to demonstrate web application development, database management, backend programming, and user management.
 
-## 👨‍💻 Developer
+## 👨‍💻 Developers
 
 **Shalinka Uyanage**
+**Shenal Perera**
+**Tharidu Francesco**
 
 GitHub: [shalinkauyanage](https://github.com/shalinkauyanage)
+GitHub: [shenalhq](https://github.com/shenalhq)
+GitHub: [shenalhq](https://github.com/tharindusamarakon8-cloud)
 
 ---
 
