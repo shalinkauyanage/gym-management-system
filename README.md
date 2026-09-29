@@ -77,14 +77,14 @@ This project was developed as a practical software development project to demons
 
 ## 👨‍💻 Developers
 
-**Shalinka Uyanage**.
-**Shenal Perera**.
-**Tharidu Francesco**.
+**Shalinka Uyanage**  
+GitHub: [shalinkauyanage](https://github.com/shalinkauyanage)
 
-GitHub: [shalinkauyanage](https://github.com/shalinkauyanage).
-GitHub: [shenalhq](https://github.com/shenalhq).
-GitHub: [shenalhq](https://github.com/tharindusamarakon8-cloud).
+**Shenal Perera**  
+GitHub: [shenalhq](https://github.com/shenalhq)
 
+**Tharidu Francesco**  
+GitHub: [shenalhq](https://github.com/shenalhq)
 ---
 
 ⭐ If you find this project useful, feel free to explore the repository.
